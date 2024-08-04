@@ -5,7 +5,7 @@
 }
 
 .hero{
-    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, rgba(64, 32, 245, 0.74), rgb(102, 245, 102));
     display: flex;
@@ -29,6 +29,7 @@ h1 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    text-align: center;
   }
  
 
@@ -91,11 +92,39 @@ select{
 
 
 @media only screen and (max-width: 768px) {
-
-  div hero{
-        max-width: 90%
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    }
+    .hero {
+       max-width: 100%;
+       margin: 0 auto;
+       text-align: center;
+       /* Add other necessary styles for smaller screens */
+     }
+ 
+     .row{
+         width: 90%;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+      }
+ 
+      textarea{
+         width: 90%;
+      }
+ 
+      select{
+         
+         color: #000000;
+         background: rgba(0, 0, 0, 0.199);
+         border-radius: 20px;
+                 outline: 0;
+         border: 0;
+         font-size: 18px;
+         appearance: none; /*This will hide all the icons*/
+         background-image: url(dropdown.png);
+         background-repeat: no-repeat;
+         background-size: 20px;
+         background-position-x: calc(100% - 20px);
+         background-position-y: 20px;
+         padding: 15px; /* Padding for text inside the select */
+     
+     }
+   }
